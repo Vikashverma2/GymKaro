@@ -1,0 +1,146 @@
+
+.join-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--primary-color);
+ 
+}
+
+.join-form-wrapper {
+  display: flex;
+  width: 80%;
+  max-width: 1000px;
+  background: var(--primary-color-light);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+   padding: 1rem;
+}
+.join-image-wrapper {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: fadeInRight 0.8s ease-in-out;
+}
+
+.join-image-wrapper img {
+  max-width: 100%;
+  border-radius: 18px;
+}
+
+.join-form {
+  flex: 1;
+  padding: 2.5rem 2rem;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.join-form h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--white);
+}
+
+.join-form p {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+}
+
+.join-form input,
+.join-form textarea,
+.join-form select {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--primary-color-extra-light);
+  background-color: var(--primary-color-extra-light);
+  color: var(--white);
+  border-radius: 12px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+
+.join-form input:focus,
+.join-form textarea:focus,
+.join-form select:focus {
+  border-color: var(--secondary-color);
+  background-color: var(--primary-color-light);
+}
+
+.join-btn {
+  width: 100%;
+  padding: 0.9rem;
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.join-btn:hover {
+  background: var(--secondary-color-dark);
+  transform: translateY(-1px);
+}
+
+.success {
+  margin-top: 1rem;
+  color: #10b981;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .join-container {
+    flex-direction: column;
+    padding: 20px 0;
+    
+    margin: 0;
+  }
+
+  .join-form-wrapper {
+    flex-direction: column;
+  }
+
+  .join-form,
+  .join-image-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 1.5rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
